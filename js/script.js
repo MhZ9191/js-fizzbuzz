@@ -34,29 +34,51 @@
 //
 //
 // ! POSSO USARE UNA LISTA DI FUNZIONI?
-function mulQuindici(num) {
-  console.log(`${num} : FizzBuzz`);
-}
+// function mulQuindici(num) {
+//   console.log(`${num} : FizzBuzz`);
+// }
 
-function mulCinque(num) {
-  console.log(`${num} : Buzz`);
-}
+// function mulCinque(num) {
+//   console.log(`${num} : Buzz`);
+// }
 
-function mulTre(num) {
-  console.log(`${num} : Fizz`);
-}
+// function mulTre(num) {
+//   console.log(`${num} : Fizz`);
+// }
 
-// * lista con dentro nomi di funzione
-const myList = [mulQuindici, mulCinque, mulTre];
+// // * lista con dentro nomi di funzione
+// const myList = [mulQuindici, mulCinque, mulTre];
 
-// * inizio ciclo
-for (let i = 1; i <= 100; i++) {
-  if (i % 5 === 0 && i % 3 === 0) {
-    myList[0](i);
-  } else if (i % 5 === 0) {
-    myList[1](i);
-  } else if (i % 3 === 0) {
-    myList[2](i);
+// // * inizio ciclo
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 5 === 0 && i % 3 === 0) {
+//     myList[0](i);
+//   } else if (i % 5 === 0) {
+//     myList[1](i);
+//   } else if (i % 3 === 0) {
+//     myList[2](i);
+//   } else {
+//     console.log(`${i}`);
+//   }
+// }
+//
+//
+//
+//
+//
+// ! POSSO USARE VARIABILI COME CONDIZIONI?
+
+for (let i = 1; i < 100; i++) {
+  const firstCondition = i % 5 === 0 && i % 3 === 0;
+  const secondCondition = i % 5 === 0;
+  const thirdCondition = i % 3 === 0;
+
+  if (firstCondition) {
+    console.log(`${i} : FizzBuzz`);
+  } else if (secondCondition) {
+    console.log(`${i} : Buzz`);
+  } else if (thirdCondition) {
+    console.log(`${i} : Fizz`);
   } else {
     console.log(`${i}`);
   }
