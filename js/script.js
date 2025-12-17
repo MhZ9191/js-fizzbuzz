@@ -92,15 +92,60 @@
 //
 // ! USARE IL CICLO FOR SU UNA STRINGA
 
-let myString = "hello world!";
-let newString = "";
+// let myString = "hello world!";
+// let newString = "";
 
-for (let i = 0; i < myString.length; i++) {
-  if (i % 2 === 0) {
-    newString += myString[i].toUpperCase();
-  } else {
-    newString += myString[i];
+// for (let i = 0; i < myString.length; i++) {
+//   if (i % 2 === 0) {
+//     newString += myString[i].toUpperCase();
+//   } else {
+//     newString += myString[i];
+//   }
+// }
+
+// console.log(newString);
+//
+//
+//
+//
+//
+//
+//
+//
+// ! USARE CICLO FOR PER CREARE UNA LISTA DI NUMERI RANDOM E CICLARE SE CI SONO MULTIPLI DI 15,5 E 3
+
+let myList = [];
+
+// * CREO LA LISTA DI NUMERI RANDOM
+for (let i = 0; i < 30; i++) {
+  myList[i] = Math.floor(Math.random() * 200 + 1);
+}
+
+// * ORDINO GLI ELEMENTI IN ORDINE CRESCENTE
+let tmp;
+for (let i = 0; i < myList.length - 1; i++) {
+  for (let m = 0; m < myList.length; m++) {
+    if (myList[m] > myList[m + 1]) {
+      tmp = myList[m + 1];
+      myList[m + 1] = myList[m];
+      myList[m] = tmp;
+    }
   }
 }
 
-console.log(newString);
+// * MANDO A SCHERMO
+for (let i = 0; i < myList.length; i++) {
+  const firstCondition = i % 5 === 0 && i % 3 === 0;
+  const secondCondition = i % 5 === 0;
+  const thirdCondition = i % 3 === 0;
+
+  if (firstCondition) {
+    console.log(`${myList[i]} : FizzBuzz`);
+  } else if (secondCondition) {
+    console.log(`${myList[i]} : Buzz`);
+  } else if (thirdCondition) {
+    console.log(`${myList[i]} : Fizz`);
+  } else {
+    console.log(`${myList[i]}`);
+  }
+}
