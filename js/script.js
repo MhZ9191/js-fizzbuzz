@@ -68,18 +68,39 @@
 //
 // ! POSSO USARE VARIABILI COME CONDIZIONI?
 
-for (let i = 1; i < 100; i++) {
-  const firstCondition = i % 5 === 0 && i % 3 === 0;
-  const secondCondition = i % 5 === 0;
-  const thirdCondition = i % 3 === 0;
+// for (let i = 1; i < 100; i++) {
+//   const firstCondition = i % 5 === 0 && i % 3 === 0;
+//   const secondCondition = i % 5 === 0;
+//   const thirdCondition = i % 3 === 0;
 
-  if (firstCondition) {
-    console.log(`${i} : FizzBuzz`);
-  } else if (secondCondition) {
-    console.log(`${i} : Buzz`);
-  } else if (thirdCondition) {
-    console.log(`${i} : Fizz`);
+//   if (firstCondition) {
+//     console.log(`${i} : FizzBuzz`);
+//   } else if (secondCondition) {
+//     console.log(`${i} : Buzz`);
+//   } else if (thirdCondition) {
+//     console.log(`${i} : Fizz`);
+//   } else {
+//     console.log(`${i}`);
+//   }
+// }
+//
+//
+//
+//
+//
+//
+//
+// ! USARE IL CICLO FOR SU UNA STRINGA
+
+let myString = "hello world!";
+let newString = "";
+
+for (let i = 0; i < myString.length; i++) {
+  if (i % 2 === 0) {
+    newString += myString[i].toUpperCase();
   } else {
-    console.log(`${i}`);
+    newString += myString[i];
   }
 }
+
+console.log(newString);
