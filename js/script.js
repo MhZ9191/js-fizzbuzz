@@ -24,9 +24,40 @@
 
 // ! SE HO UN SOLO COMANDO DOPO IF POSSO OMETTERE LE GRAFFE?
 
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 5 === 0 && i % 3 === 0) console.log(`${i} : FizzBuzz`); // ! primo IF
+//   else if (i % 5 === 0) console.log(`${i} : Buzz`); // ! secondo ELSE IF
+//   else if (i % 3 === 0) console.log(`${i} : Fizz`); // ! terzo ELSE IF
+//   else console.log(`${i}`); // ! ELSE
+// }
+//
+//
+//
+// ! POSSO USARE UNA LISTA DI FUNZIONI?
+function mulQuindici(num) {
+  console.log(`${num} : FizzBuzz`);
+}
+
+function mulCinque(num) {
+  console.log(`${num} : Buzz`);
+}
+
+function mulTre(num) {
+  console.log(`${num} : Fizz`);
+}
+
+// * lista con dentro nomi di funzione
+const myList = [mulQuindici, mulCinque, mulTre];
+
+// * inizio ciclo
 for (let i = 1; i <= 100; i++) {
-  if (i % 5 === 0 && i % 3 === 0) console.log(`${i} : FizzBuzz`); // ! primo IF
-  else if (i % 5 === 0) console.log(`${i} : Buzz`); // ! secondo ELSE IF
-  else if (i % 3 === 0) console.log(`${i} : Fizz`); // ! terzo ELSE IF
-  else console.log(`${i}`); // ! ELSE
+  if (i % 5 === 0 && i % 3 === 0) {
+    myList[0](i);
+  } else if (i % 5 === 0) {
+    myList[1](i);
+  } else if (i % 3 === 0) {
+    myList[2](i);
+  } else {
+    console.log(`${i}`);
+  }
 }
