@@ -124,7 +124,7 @@ for (let i = 0; i < 30; i++) {
 // * ORDINO GLI ELEMENTI IN ORDINE CRESCENTE
 let tmp;
 for (let i = 0; i < myList.length - 1; i++) {
-  for (let m = 0; m < myList.length; m++) {
+  for (let m = 0; m < myList.length - 1; m++) {
     if (myList[m] > myList[m + 1]) {
       tmp = myList[m + 1];
       myList[m + 1] = myList[m];
